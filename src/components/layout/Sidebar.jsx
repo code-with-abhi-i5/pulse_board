@@ -97,7 +97,7 @@ export default function Sidebar({ isOpen, onClose }) {
               ? 'bg-gradient-to-br from-primary-500/10 to-accent-500/5 border border-primary-500/10'
               : 'bg-gradient-to-br from-primary-50 to-accent-50 border border-primary-100'
           }`}>
-            <p className="text-xs font-semibold mb-1">FusionBoard v1.0</p>
+            <p className="text-xs font-semibold mb-1">Pulse Board v1.0</p>
             <p className={`text-[11px] ${theme === 'dark' ? 'text-surface-400' : 'text-surface-500'}`}>
               Multi-API Dashboard
             </p>

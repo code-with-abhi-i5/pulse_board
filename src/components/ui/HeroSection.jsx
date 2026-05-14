@@ -155,9 +155,25 @@ export default function HeroSection({ weatherTemp, btcPrice, newsCount }) {
                 <FiZap className="w-5 h-5 text-white" />
               </motion.div>
               <span className={`text-xs font-bold uppercase tracking-[0.2em] ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
-                FusionBoard
+                Pulse Board
               </span>
             </div>
+            
+            {/* Tagline */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="mt-4 flex justify-center lg:justify-start"
+            >
+              <span className={`px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide border shadow-sm ${
+                isDark 
+                  ? 'bg-primary-500/10 border-primary-500/30 text-primary-300' 
+                  : 'bg-primary-50 border-primary-200 text-primary-700'
+              }`}>
+                ✨ Your world, one dashboard
+              </span>
+            </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight mb-4">
               {greeting},{' '}

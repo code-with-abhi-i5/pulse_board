@@ -15,7 +15,7 @@ export default function Chatbot() {
     {
       id: 1,
       role: 'assistant',
-      content: "Hi! I'm your FusionBoard AI assistant. You can ask me about crypto prices, weather facts, or just ask me to tell a joke! 🤖",
+      content: "Hi! I'm your Pulse Board AI assistant. You can ask me about crypto prices, weather facts, or just ask me to tell a joke! 🤖",
     },
   ])
   const [input, setInput] = useState('')
@@ -56,7 +56,7 @@ export default function Chatbot() {
 
       // Provide some context about the dashboard
       const prompt = `
-        You are a helpful AI assistant built into a dashboard called "FusionBoard".
+        You are a helpful AI assistant built into a dashboard called "Pulse Board".
         The dashboard features Weather, Crypto, News, and Jokes.
         Be concise, friendly, and use emojis occasionally.
         User message: ${userMessage}

@@ -18,7 +18,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
+    <div className={`min-h-screen overflow-x-hidden transition-colors duration-300 ${
       theme === 'dark' 
         ? 'bg-surface-950 text-white' 
         : 'bg-surface-100 text-surface-900'
@@ -26,7 +26,7 @@ function App() {
       <Navbar onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
       <div className="flex">
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <main className="flex-1 min-h-[calc(100vh-4rem)] ml-0 lg:ml-64 p-4 md:p-6 lg:p-8 transition-all duration-300">
+        <main className="flex-1 min-w-0 w-full overflow-x-hidden min-h-[calc(100vh-4rem)] ml-0 lg:ml-64 p-4 md:p-6 lg:p-8 transition-all duration-300">
           <Suspense fallback={<Loader />}>
             <Routes>
               <Route path="/" element={<Home />} />

@@ -9,7 +9,39 @@ export default function CryptoTable({ coins }) {
 
   return (
     <div className="glass-card overflow-hidden">
-      <div className="overflow-x-auto">
+      {/* Mobile View (Cards) */}
+      <div className="md:hidden divide-y divide-surface-100 dark:divide-white/5">
+        {coins.map((coin, i) => {
+          const isPositive = coin.price_change_percentage_24h >= 0
+          return (
+            <motion.div
+              key={coin.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.03 }}
+              className={`p-4 flex items-center gap-3 transition-colors ${isDark ? 'hover:bg-white/5' : 'hover:bg-surface-50'}`}
+            >
+              <span className={`text-xs font-bold w-4 ${isDark ? 'text-surface-500' : 'text-surface-400'}`}>{i + 1}</span>
+              <img src={coin.image} alt={coin.name} className="w-8 h-8 rounded-full shadow-sm" />
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between">
+                  <p className="font-semibold text-sm truncate">{coin.name}</p>
+                  <p className="font-semibold text-sm">{formatCurrency(coin.current_price)}</p>
+                </div>
+                <div className="flex items-center justify-between mt-1">
+                  <p className={`text-[11px] uppercase font-medium ${isDark ? 'text-surface-500' : 'text-surface-400'}`}>{coin.symbol}</p>
+                  <p className={`text-xs font-bold ${isPositive ? 'text-emerald-400' : 'text-red-400'}`}>
+                    {formatPercentage(coin.price_change_percentage_24h)}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          )
+        })}
+      </div>
+
+      {/* Desktop View (Table) */}
+      <div className="hidden md:block overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className={`text-xs uppercase tracking-wider ${isDark ? 'text-surface-500 border-b border-white/5' : 'text-surface-400 border-b border-surface-200'}`}>

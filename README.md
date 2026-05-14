@@ -1,6 +1,6 @@
-# 🚀 FusionBoard
+# 🚀 Pulse Board
 
-**FusionBoard** is a fully responsive, modern, production-quality React.js Dashboard Web App that combines multiple real-time public APIs into one elegant platform. 
+**Pulse Board** is a fully responsive, modern, production-quality React.js Dashboard Web App that combines multiple real-time public APIs into one elegant platform. 
 
 Designed with a premium UI combining elements from modern SaaS admin panels, it features glassmorphism effects, smooth animations, gradient accents, and dark/light modes.
 
@@ -28,8 +28,8 @@ Designed with a premium UI combining elements from modern SaaS admin panels, it 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/fusionboard.git
-   cd fusionboard
+   git clone https://github.com/yourusername/pulse-board.git
+   cd pulse-board
    ```
 
 2. **Install dependencies:**
